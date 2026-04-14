@@ -120,7 +120,7 @@ void setup() {
   esp_task_wdt_init(30, false);
 
   analogReadResolution(12);
-  analogSetPinAttenuation(EOG_PIN, ADC_ATTEN_DB_11);  // 0–3.9V range
+ //analogSetPinAttenuation(EOG_PIN, ADC_ATTEN_DB_11_0);  // 0–3.9V range
   for (int i = 0; i < 16; i++) analogRead(EOG_PIN);   // warm up ADC
 
   serialMutex = xSemaphoreCreateMutex();
